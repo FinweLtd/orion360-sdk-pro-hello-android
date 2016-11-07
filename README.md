@@ -34,23 +34,23 @@ Cloning the project
 
 To clone the project from GitHub, start Android Studio, select "Check out project from Version Control" and "Git" from the popup dialog.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18509522/bea74c6e-7a81-11e6-8235-03e809c49b68.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058263/c0470d06-a4f8-11e6-976f-805ae8027973.png)
 
 Set repository URL, parent directory, and project directory. 
 
 Notice that the repository URL is easy to copy-paste from browser to Android Studio: click the green "Clone or download" button on the project's GitHub page, copy the URL from the dialog that appears, and paste it to Android Studio's dialog.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18509660/5ce52914-7a82-11e6-821d-43321ef169ee.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058276/d3cabf8a-a4f8-11e6-904b-73740a1df849.png)
 
 Cloning the project will take a moment. Android Studio then asks if you want to open the project. Answer "Yes".
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18509742/dc4a0b66-7a82-11e6-9775-392d31487363.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058289/e32e764c-a4f8-11e6-95b5-e47247569ac0.png)
 
 The project opens, and Android Studio performs Gradle sync that will take some time (please wait). After Gradle sync finishes, you can find the project files by opening the Project view on the left.
 
 You can now proceed to connecting an Android device to your computer via a USB cable, and then run the app on device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18509763/00ad461c-7a83-11e6-98d9-e15d3b300725.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058305/f22b5d5e-a4f8-11e6-9b77-8916a2589bc8.png)
 
 
 Creating an empty application project
