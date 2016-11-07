@@ -58,39 +58,39 @@ Creating an empty application project
 
 Start Android Studio application. From the welcome screen, select 'Start a new Android Studio project'.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18169552/4bd00ee2-7063-11e6-8dab-a522b5296b7f.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057508/968046b2-a4f4-11e6-8e77-170ee3f06398.png)
 
 Fill in your application name, company domain, package name, and project location. Click Next button.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18169775/5587bfce-7064-11e6-96d7-a36d0db27913.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057520/afd7c270-a4f4-11e6-92e8-0d4a9edfcf61.png)
 
-Check that "Phone and Tablet" is selected, and the minimum SDK is at least "API 14: Android 4.0 (IceCreamSandwitch)". Click Next.
+Check that "Phone and Tablet" is selected, and the minimum SDK is at least "API 19: Android 4.4 (KitKat)". Click Next.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18169873/b96fda80-7064-11e6-8575-329da087c3e6.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057538/c7fb0132-a4f4-11e6-9a6b-0c09d3b70363.png)
 
 Choose "Empty Activity". Click Next.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18169938/ffe680fe-7064-11e6-9570-ef31edd1d9a1.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057571/fa75faf4-a4f4-11e6-9de4-216b76de152b.png)
 
 Accept the default settings for activity name and layout file. Click Finish. New application project will be created.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18169985/368fba94-7065-11e6-856f-7a48441cb84a.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057580/0bfddbca-a4f5-11e6-9423-5b42a24051a1.png)
 
 After a moment of processing, you should see Android Studio IDE with your newly created project files. 
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18170077/92465f00-7065-11e6-9bd4-f6d6df12920a.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057608/227c5188-a4f5-11e6-9e30-129adbc2e1b9.png)
 
 Connect an Android phone or tablet to your computer using a USB cable, and check that developer mode has been enabled: you should find "Developer options" under your device's Settings view. If not, navigate to Settings > About phone > Build number, and tap the section 7 times to become a developer.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18170397/ddcf201e-7066-11e6-8de8-59cb7492b595.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057620/30f58b08-a4f5-11e6-8382-cef6cf23be2f.png)
 
 From Android Studio menu, select Run > Run 'app', and when the 'Select Deployment Target' dialog appears, check that your device shows up in the "Connected Devices" list, and is selected. Click OK. The application will be built and deployed to your device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18170461/1e6c8030-7067-11e6-8c17-8b3bce493e81.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057632/45c31f46-a4f5-11e6-8e77-aace5b0e4bb8.png)
 
 After a moment of processing, the app should start on your Android device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18170531/4d2277fe-7067-11e6-816b-97b1d4a15b60.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057643/581236b4-a4f5-11e6-8bf8-1382af90cab7.png)
 
 Acquiring Orion360 SDK binaries
 -------------------------------
