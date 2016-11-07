@@ -116,12 +116,12 @@ After editing a gradle file, the IDE suggests to sync the project. Accept the su
 After gradle sync has finished, in Android Studio's Project view, double click build.gradle file for the app module. Find section 'dependencies', and add the following line inside it:
 
 ```gradle
-compile 'fi.finwe.orion360:orion360-sdk-basic:1.2.00' // From Finwe maven repo at Bintray
+compile 'fi.finwe.orion360:orion360-sdk-pro:3.0.01' // From Finwe maven repo at Bintray
 ```
 
 After editing a gradle file, the IDE suggests to sync the project. Accept the suggestion, or click the Sync button from the toolbar.
 
-Notice that here we will use version '1.2.00' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
+Notice that here we will use version '3.0.01' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058808/86abfb4e-a4fb-11e6-84d3-f010e27de611.png)
 
