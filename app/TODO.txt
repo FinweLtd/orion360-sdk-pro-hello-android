@@ -1,0 +1,6 @@
+TODO
+----
+
+- Remove private Bintray repo and test against public Bintray repo
+
+- Orion360 SDK Pro API level - either edit Hello World README text & images to use API level 21 (5.0), or hopefully we can make Orion work with API level 19 (4.4)
