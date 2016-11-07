@@ -90,7 +90,7 @@ From Android Studio menu, select Run > Run 'app', and when the 'Select Deploymen
 
 After a moment of processing, the app should start on your Android device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057643/581236b4-a4f5-11e6-8bf8-1382af90cab7.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075194/e4cf4394-a53b-11e6-8b94-758453c0f3bd.png)
 
 Acquiring Orion360 SDK binaries
 -------------------------------
