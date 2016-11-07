@@ -1,10 +1,10 @@
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18481794/3fda62e0-79e6-11e6-9f00-15bb10c29dd3.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057016/bf5fffb2-a4f1-11e6-9e25-0a8efa6203ff.png)
 
-# Hello World with Orion360 SDK (Basic) for Android
+# Hello World with Orion360 SDK (Pro) for Android
 
 This repository contains a minimal Hello World -style example of adding 360 video playback capability into an Android application project using Android Studio and Orion360 SDK for Android.
 
-> This application is available in [Google Play](https://play.google.com/store/apps/details?id=fi.finwe.orion360.sdk.basic.hello)
+> This application is available in [Google Play](https://play.google.com/store/apps/details?id=fi.finwe.orion360.sdk.pro.hello)
 
 Table of Contents
 -----------------
@@ -25,7 +25,7 @@ Prerequisities
 Install Android Studio IDE (recommended version is 2.2 or newer):
 https://developer.android.com/studio/install.html
 
-Then, using the SDK Manager tool, install one or more Android SDKs. Notice that for Orion360 SDK Basic, minimum API level is 14: Android 4.0 IceCreamSandwitch.
+Then, using the SDK Manager tool, install one or more Android SDKs. Notice that for Orion360 SDK Pro, minimum API level is 19: Android 4.4 KitKat.
 
 Cloning the project
 -------------------
