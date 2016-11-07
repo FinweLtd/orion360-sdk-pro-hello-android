@@ -72,13 +72,13 @@ Choose "Empty Activity". Click Next.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057571/fa75faf4-a4f4-11e6-9de4-216b76de152b.png)
 
-Accept the default settings for activity name and layout file. Click Finish. New application project will be created.
+Uncheck 'Backwards Compatibility (AppCompat)', we don't need it. Click Finish. New application project will be created.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057580/0bfddbca-a4f5-11e6-9423-5b42a24051a1.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075009/3333bc82-a53b-11e6-996d-1be69130d9a9.png)
 
 After a moment of processing, you should see Android Studio IDE with your newly created project files. 
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057608/227c5188-a4f5-11e6-9e30-129adbc2e1b9.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075083/7b0b421e-a53b-11e6-8065-382d98291cee.png)
 
 Connect an Android phone or tablet to your computer using a USB cable, and check that developer mode has been enabled: you should find "Developer options" under your device's Settings view. If not, navigate to Settings > About phone > Build number, and tap the section 7 times to become a developer.
 
