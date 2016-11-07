@@ -125,16 +125,16 @@ Notice that here we will use version '3.0.01' of the SDK binaries. When new vers
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058808/86abfb4e-a4fb-11e6-84d3-f010e27de611.png)
 
-Now we can use Orion360 SDK in the project. 
+Now we can use Orion360 SDK in the project.
 
-Adding OrionVideoView to the XML layout
----------------------------------------
+Adding OrionView to the XML layout
+----------------------------------
 
 In Android Studio's Project view, expand res > layout and double click activity_main.xml. Select 'Text' pane to hide the designer and show the layout's XML code. Then, above TextView item, add the following lines:
 
 ```xml
-<fi.finwe.orion360.OrionVideoView
-  android:id="@+id/orion_video_view"
+<fi.finwe.orion360.OrionView
+  android:id="@+id/orion_view"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
 ```
