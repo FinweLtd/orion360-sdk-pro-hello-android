@@ -181,7 +181,7 @@ Since we are going to stream a video file from the network, we must add INTERNET
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18173579/c98d8706-7072-11e6-8d7c-5c9aecf39abf.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137807/7301b74c-a685-11e6-9264-94e581100066.png)
 
 Acquiring Orion360 SDK license file
 -----------------------------------
