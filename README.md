@@ -150,19 +150,19 @@ Writing Java code
 
 In Android Studio's Project view, expand java > [package name] and double click MainActivity. 
 
-By default, the MainActivity class extends Activity class. Change it to extend SimpleOrionActivity class instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
+By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
 
 ```java
 public class MainActivity extends SimpleOrionActivity {
 ```
 
-Then append to onCreate() method a line that takes in use the OrionView object that we defined in the activity's XML layout. This view is where the 360 content will appear in the user interface.
+Then append to onCreate() method a line that takes in use the OrionView object that we defined in the activity's XML layout. This is where the 360 content will appear.
 
 ```java
 setOrionView(R.id.orion_view);
 ```
 
-Finally, set a URI to the 360 content that will be rendered on screen.
+Finally, set a URI to the 360 content that we want to be rendered within OrionView.
 
 ```java
 setContentUri("https://s3.amazonaws.com/orion360-us/Orion360_test_video_2d_equi_360x180deg_1920x960pix_30fps_30sec_x264.mp4");
