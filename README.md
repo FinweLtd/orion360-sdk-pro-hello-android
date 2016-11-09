@@ -150,83 +150,27 @@ Writing Java code
 
 In Android Studio's Project view, expand java > [package name] and double click MainActivity. 
 
-Add a class member variable for the video view, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.OrionVideoView).
+By default, the MainActivity class extends Activity class. Change it to extend SimpleOrionActivity class instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
 
 ```java
-private OrionVideoView mOrionVideoView;
+public class MainActivity extends SimpleOrionActivity {
 ```
 
-Then append to onCreate() method a line to retrieve the video view object that we defined in the activity's XML layout:
+Then append to onCreate() method a line that takes in use the OrionView object that we defined in the activity's XML layout. This view is where the 360 content will appear in the user interface.
 
 ```java
-mOrionVideoView = (OrionVideoView) findViewById(R.id.orion_video_view);
+setOrionView(R.id.orion_view);
 ```
 
-Preparing a video for playback always takes a moment, therefore we need to become a listener for a callback that tells when the video player is ready. When the callback comes, we can start the player.
+Finally, set a URI to the 360 content that will be rendered on screen.
 
 ```java
-mOrionVideoView.setOnPreparedListener(new OrionVideoView.OnPreparedListener() {
-  @Override
-  public void onPrepared(OrionVideoView orionVideoView) {
-    mOrionVideoView.start();
-  }
-});
-```
-
-You can play a 360 video file by calling the prepare() method. When called, Orion360 SDK will first check if a valid license file is available, and then proceed to preparing the video player. When done, onPrepared() will be called - and the playback begins, as we have requested above.
-
-```java
-try {
-  mOrionVideoView.prepare("http://www.finwe.mobi/orion360/test/equi/Orion360_test_video_1920x960.mp4");
-} catch (OrionVideoView.LicenseVerificationException e) {
-  Log.e("OrionVideoView", "Orion360 SDK license could not be verified!", e);
-}
-```
-
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18172784/8fd0f53c-706f-11e6-895f-f8e137e0c30a.png)
-
-Finally, we need to let the video player to respond to the activity's life cycle events, so that it can automatically pause and resume along the activity, and clean up when the activity gets destroyed. Let's propagate them to the video view as follows:
-
-```java
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        mOrionVideoView.onStart();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        mOrionVideoView.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        mOrionVideoView.onPause();
-
-        super.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        mOrionVideoView.onStop();
-
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy() {
-        mOrionVideoView.onDestroy();
-
-        super.onDestroy();
-    }
+setContentUri("https://s3.amazonaws.com/orion360-us/Orion360_test_video_2d_equi_360x180deg_1920x960pix_30fps_30sec_x264.mp4");
 ```
 
 Now we have written all Java code that is required for a basic 360 video player.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18172876/f9ef3924-706f-11e6-9829-fc5e418486fe.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137633/484b971c-a684-11e6-8dfa-651448f060d5.png)
 
 Adding Android permissions
 --------------------------
