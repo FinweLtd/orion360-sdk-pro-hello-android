@@ -181,7 +181,7 @@ Since we are going to stream a video file from the network, we must add INTERNET
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137807/7301b74c-a685-11e6-9264-94e581100066.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20138589/e536d370-a689-11e6-842a-fea0b2ca288e.png)
 
 Acquiring Orion360 SDK license file
 -----------------------------------
@@ -194,7 +194,7 @@ However, to continue evaluating the SDK with the hello app, you can use the (wat
 
 > **Notice that the license file is a simple text file, but since it is signed, any kind of editing makes it invalid. Especially, watch out line endings - file editors, version control software and copy-paste operation may silently convert between CR/LF and LF characters, and even though the file looks exactly the same, it isn't!**
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18173330/e3fb482c-7071-11e6-9056-0d0cbba3c17a.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20138606/0243bf1e-a68a-11e6-899d-c1d9ecbaa969.png)
 
 Running the application
 -----------------------
