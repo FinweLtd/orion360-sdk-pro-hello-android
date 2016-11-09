@@ -72,13 +72,13 @@ Choose "Empty Activity". Click Next.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057571/fa75faf4-a4f4-11e6-9de4-216b76de152b.png)
 
-Accept the default settings for activity name and layout file. Click Finish. New application project will be created.
+Uncheck 'Backwards Compatibility (AppCompat)', we don't need it. Click Finish. New application project will be created.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057580/0bfddbca-a4f5-11e6-9423-5b42a24051a1.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075009/3333bc82-a53b-11e6-996d-1be69130d9a9.png)
 
 After a moment of processing, you should see Android Studio IDE with your newly created project files. 
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057608/227c5188-a4f5-11e6-9e30-129adbc2e1b9.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075083/7b0b421e-a53b-11e6-8065-382d98291cee.png)
 
 Connect an Android phone or tablet to your computer using a USB cable, and check that developer mode has been enabled: you should find "Developer options" under your device's Settings view. If not, navigate to Settings > About phone > Build number, and tap the section 7 times to become a developer.
 
@@ -90,7 +90,7 @@ From Android Studio menu, select Run > Run 'app', and when the 'Select Deploymen
 
 After a moment of processing, the app should start on your Android device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057643/581236b4-a4f5-11e6-8bf8-1382af90cab7.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20075194/e4cf4394-a53b-11e6-8b94-758453c0f3bd.png)
 
 Acquiring Orion360 SDK binaries
 -------------------------------
@@ -125,108 +125,52 @@ Notice that here we will use version '3.0.01' of the SDK binaries. When new vers
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058808/86abfb4e-a4fb-11e6-84d3-f010e27de611.png)
 
-Now we can use Orion360 SDK in the project. 
+Now we can use Orion360 SDK in the project.
 
-Adding OrionVideoView to the XML layout
----------------------------------------
+Adding OrionView to the XML layout
+----------------------------------
 
 In Android Studio's Project view, expand res > layout and double click activity_main.xml. Select 'Text' pane to hide the designer and show the layout's XML code. Then, above TextView item, add the following lines:
 
 ```xml
-<fi.finwe.orion360.OrionVideoView
-  android:id="@+id/orion_video_view"
+<fi.finwe.orion360.OrionView
+  android:id="@+id/orion_view"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18171902/39551fc4-706c-11e6-919d-8ab34323f89d.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137193/cf3d93cc-a681-11e6-9a6c-89fcc2a6e1b8.png)
 
 If you now switch back to 'Design' tab, you can see that the video view will expand to fill the layout.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18171955/68955dee-706c-11e6-8d00-690fea36c5ef.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137213/f1721c1a-a681-11e6-851a-5d8cef9fb716.png)
 
 Writing Java code
 -----------------
 
 In Android Studio's Project view, expand java > [package name] and double click MainActivity. 
 
-Add a class member variable for the video view, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.OrionVideoView).
+By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
 
 ```java
-private OrionVideoView mOrionVideoView;
+public class MainActivity extends SimpleOrionActivity {
 ```
 
-Then append to onCreate() method a line to retrieve the video view object that we defined in the activity's XML layout:
+Then append to onCreate() method a line that takes in use the OrionView object that we defined in the activity's XML layout. This is where the 360 content will appear.
 
 ```java
-mOrionVideoView = (OrionVideoView) findViewById(R.id.orion_video_view);
+setOrionView(R.id.orion_view);
 ```
 
-Preparing a video for playback always takes a moment, therefore we need to become a listener for a callback that tells when the video player is ready. When the callback comes, we can start the player.
+Finally, set a URI to the 360 content that we want to be rendered within OrionView.
 
 ```java
-mOrionVideoView.setOnPreparedListener(new OrionVideoView.OnPreparedListener() {
-  @Override
-  public void onPrepared(OrionVideoView orionVideoView) {
-    mOrionVideoView.start();
-  }
-});
-```
-
-You can play a 360 video file by calling the prepare() method. When called, Orion360 SDK will first check if a valid license file is available, and then proceed to preparing the video player. When done, onPrepared() will be called - and the playback begins, as we have requested above.
-
-```java
-try {
-  mOrionVideoView.prepare("http://www.finwe.mobi/orion360/test/equi/Orion360_test_video_1920x960.mp4");
-} catch (OrionVideoView.LicenseVerificationException e) {
-  Log.e("OrionVideoView", "Orion360 SDK license could not be verified!", e);
-}
-```
-
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18172784/8fd0f53c-706f-11e6-895f-f8e137e0c30a.png)
-
-Finally, we need to let the video player to respond to the activity's life cycle events, so that it can automatically pause and resume along the activity, and clean up when the activity gets destroyed. Let's propagate them to the video view as follows:
-
-```java
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        mOrionVideoView.onStart();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        mOrionVideoView.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        mOrionVideoView.onPause();
-
-        super.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        mOrionVideoView.onStop();
-
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy() {
-        mOrionVideoView.onDestroy();
-
-        super.onDestroy();
-    }
+setContentUri("https://s3.amazonaws.com/orion360-us/Orion360_test_video_2d_equi_360x180deg_1920x960pix_30fps_30sec_x264.mp4");
 ```
 
 Now we have written all Java code that is required for a basic 360 video player.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18172876/f9ef3924-706f-11e6-9829-fc5e418486fe.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137633/484b971c-a684-11e6-8dfa-651448f060d5.png)
 
 Adding Android permissions
 --------------------------
@@ -237,7 +181,7 @@ Since we are going to stream a video file from the network, we must add INTERNET
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18173579/c98d8706-7072-11e6-8d7c-5c9aecf39abf.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20138589/e536d370-a689-11e6-842a-fea0b2ca288e.png)
 
 Acquiring Orion360 SDK license file
 -----------------------------------
@@ -250,7 +194,7 @@ However, to continue evaluating the SDK with the hello app, you can use the (wat
 
 > **Notice that the license file is a simple text file, but since it is signed, any kind of editing makes it invalid. Especially, watch out line endings - file editors, version control software and copy-paste operation may silently convert between CR/LF and LF characters, and even though the file looks exactly the same, it isn't!**
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18173330/e3fb482c-7071-11e6-9056-0d0cbba3c17a.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20138606/0243bf1e-a68a-11e6-899d-c1d9ecbaa969.png)
 
 Running the application
 -----------------------
