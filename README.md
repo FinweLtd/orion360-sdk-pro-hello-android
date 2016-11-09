@@ -12,7 +12,7 @@ Table of Contents
 2. [Cloning the project](#cloning-the-project)
 3. [Creating an empty application project](#creating-an-empty-application-project)
 4. [Acquiring Orion360 SDK binaries](#acquiring-orion360-sdk-binaries)
-5. [Adding OrionVideoView to the XML layout](#adding-orionvideoview-to-the-xml-layout)
+5. [Adding OrionView to the XML layout](#adding-orionvideoview-to-the-xml-layout)
 6. [Writing Java code](#writing-java-code)
 7. [Adding Android permissions](#adding-android-permissions)
 8. [Acquiring Orion360 SDK license file](#acquiring-orion360-sdk-license-file)
