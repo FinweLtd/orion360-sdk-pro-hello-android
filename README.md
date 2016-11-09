@@ -139,11 +139,11 @@ In Android Studio's Project view, expand res > layout and double click activity_
   android:layout_height="match_parent" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18171902/39551fc4-706c-11e6-919d-8ab34323f89d.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137193/cf3d93cc-a681-11e6-9a6c-89fcc2a6e1b8.png)
 
 If you now switch back to 'Design' tab, you can see that the video view will expand to fill the layout.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/18171955/68955dee-706c-11e6-8d00-690fea36c5ef.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137213/f1721c1a-a681-11e6-851a-5d8cef9fb716.png)
 
 Writing Java code
 -----------------
