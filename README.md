@@ -190,7 +190,7 @@ As Orion360 SDK is a commercial product, it requires a license file to work. In 
 
 However, to continue evaluating the SDK with the hello app, you can use the (watermarked) license file that is provided with this tutorial. Following the instructions above, download and copy this file under your project's /assets folder:
 
-[Orion Hello License File](app/src/main/assets/fi.finwe.orion360.sdk.basic.hello.key.lic)
+[Orion Hello License File](app/src/main/assets/fi.finwe.orion360.sdk.pro.hello.lic)
 
 > **Notice that the license file is a simple text file, but since it is signed, any kind of editing makes it invalid. Especially, watch out line endings - file editors, version control software and copy-paste operation may silently convert between CR/LF and LF characters, and even though the file looks exactly the same, it isn't!**
 
