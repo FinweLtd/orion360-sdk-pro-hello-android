@@ -201,7 +201,7 @@ Running the application
 
 Now we are ready to try the app on device. From Android Studio menu, select Run > Run 'app', and when the 'Select Deployment Target' dialog appears, check that your device shows up in the "Connected Devices" list, and is selected. Click OK. The application will be built and deployed to your device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20139027/b9c70248-a68c-11e6-878c-adeb7de1e6ca.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20439469/421839a8-adc4-11e6-82c1-1c6e70fb4596.png)
 
 The application begins to stream the video file from network, and when the media player has buffered enough content, video starts to play on screen. Since this is a 360 video, you can look around: try out panning by rotating the device around you or by pulling the image with a finger. Use 2-finger pinch and rotate to zoom and rotate the image, respectively.
 
