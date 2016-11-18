@@ -116,14 +116,14 @@ After editing a gradle file, the IDE suggests to sync the project. Accept the su
 After gradle sync has finished, in Android Studio's Project view, double click build.gradle file for the app module. Find section 'dependencies', and add the following line inside it:
 
 ```gradle
-compile 'fi.finwe.orion360:orion360-sdk-pro:3.0.01' // From Finwe maven repo at Bintray
+compile 'fi.finwe.orion360:orion360-sdk-pro:3.0.10.001' // From Finwe maven repo at Bintray
 ```
 
 After editing a gradle file, the IDE suggests to sync the project. Accept the suggestion, or click the Sync button from the toolbar.
 
-Notice that here we will use version '3.0.01' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
+Notice that here we will use version '3.0.10.001' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058808/86abfb4e-a4fb-11e6-84d3-f010e27de611.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438683/2c32926c-adc1-11e6-81b9-11f6ca9783c7.png)
 
 Now we can use Orion360 SDK in the project.
 
@@ -133,24 +133,24 @@ Adding OrionView to the XML layout
 In Android Studio's Project view, expand res > layout and double click activity_main.xml. Select 'Text' pane to hide the designer and show the layout's XML code. Then, above TextView item, add the following lines:
 
 ```xml
-<fi.finwe.orion360.OrionView
+<fi.finwe.orion360.sdk.pro.view.OrionView
   android:id="@+id/orion_view"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137193/cf3d93cc-a681-11e6-9a6c-89fcc2a6e1b8.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438854/c8cfbfa0-adc1-11e6-936c-dc1fcc8c2628.png)
 
 If you now switch back to 'Design' tab, you can see that the video view will expand to fill the layout.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137213/f1721c1a-a681-11e6-851a-5d8cef9fb716.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438958/1c4b4988-adc2-11e6-8fcf-5bf0d206b719.png)
 
 Writing Java code
 -----------------
 
-In Android Studio's Project view, expand java > [package name] and double click MainActivity. 
+In Android Studio's Project view, expand java > fi.finwe.orion360.sdk.pro.hello and double click MainActivity. 
 
-By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
+By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.sdk.pro.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
 
 ```java
 public class MainActivity extends SimpleOrionActivity {
@@ -170,7 +170,7 @@ setContentUri("https://s3.amazonaws.com/orion360-us/Orion360_test_video_2d_equi_
 
 Now we have written all Java code that is required for a basic 360 video player.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137633/484b971c-a684-11e6-8dfa-651448f060d5.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20439066/a1dcca2c-adc2-11e6-9a64-352f73bbcdeb.png)
 
 Adding Android permissions
 --------------------------
@@ -201,7 +201,7 @@ Running the application
 
 Now we are ready to try the app on device. From Android Studio menu, select Run > Run 'app', and when the 'Select Deployment Target' dialog appears, check that your device shows up in the "Connected Devices" list, and is selected. Click OK. The application will be built and deployed to your device.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20139027/b9c70248-a68c-11e6-878c-adeb7de1e6ca.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20439469/421839a8-adc4-11e6-82c1-1c6e70fb4596.png)
 
 The application begins to stream the video file from network, and when the media player has buffered enough content, video starts to play on screen. Since this is a 360 video, you can look around: try out panning by rotating the device around you or by pulling the image with a finger. Use 2-finger pinch and rotate to zoom and rotate the image, respectively.
 
