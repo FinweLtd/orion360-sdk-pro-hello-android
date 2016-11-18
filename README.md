@@ -143,7 +143,7 @@ In Android Studio's Project view, expand res > layout and double click activity_
 
 If you now switch back to 'Design' tab, you can see that the video view will expand to fill the layout.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438895/e89a5868-adc1-11e6-8f6a-8d479a8a18e2.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438958/1c4b4988-adc2-11e6-8fcf-5bf0d206b719.png)
 
 Writing Java code
 -----------------
