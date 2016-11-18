@@ -133,17 +133,17 @@ Adding OrionView to the XML layout
 In Android Studio's Project view, expand res > layout and double click activity_main.xml. Select 'Text' pane to hide the designer and show the layout's XML code. Then, above TextView item, add the following lines:
 
 ```xml
-<fi.finwe.orion360.OrionView
+<fi.finwe.orion360.sdk.pro.view.OrionView
   android:id="@+id/orion_view"
   android:layout_width="match_parent"
   android:layout_height="match_parent" />
 ```
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137193/cf3d93cc-a681-11e6-9a6c-89fcc2a6e1b8.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438854/c8cfbfa0-adc1-11e6-936c-dc1fcc8c2628.png)
 
 If you now switch back to 'Design' tab, you can see that the video view will expand to fill the layout.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137213/f1721c1a-a681-11e6-851a-5d8cef9fb716.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438895/e89a5868-adc1-11e6-8f6a-8d479a8a18e2.png)
 
 Writing Java code
 -----------------
