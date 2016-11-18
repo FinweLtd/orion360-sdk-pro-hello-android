@@ -148,9 +148,9 @@ If you now switch back to 'Design' tab, you can see that the video view will exp
 Writing Java code
 -----------------
 
-In Android Studio's Project view, expand java > [package name] and double click MainActivity. 
+In Android Studio's Project view, expand java > fi.finwe.orion360.sdk.pro.hello and double click MainActivity. 
 
-By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
+By default, the MainActivity class extends Activity class. Change it to SimpleOrionActivity instead, and press ALT+ENTER when Android Studio suggests to import the missing class (fi.finwe.orion360.sdk.pro.SimpleOrionActivity). SimpleOrionActivity is a helper class that creates all necessary Orion objects and binds them together to form a simple player configuration.
 
 ```java
 public class MainActivity extends SimpleOrionActivity {
@@ -170,7 +170,7 @@ setContentUri("https://s3.amazonaws.com/orion360-us/Orion360_test_video_2d_equi_
 
 Now we have written all Java code that is required for a basic 360 video player.
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20137633/484b971c-a684-11e6-8dfa-651448f060d5.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20439066/a1dcca2c-adc2-11e6-9a64-352f73bbcdeb.png)
 
 Adding Android permissions
 --------------------------
