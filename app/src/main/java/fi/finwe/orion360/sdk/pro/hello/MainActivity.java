@@ -2,7 +2,7 @@ package fi.finwe.orion360.sdk.pro.hello;
 
 import android.os.Bundle;
 
-import fi.finwe.orion360.SimpleOrionActivity;
+import fi.finwe.orion360.sdk.pro.SimpleOrionActivity;
 
 public class MainActivity extends SimpleOrionActivity {
 

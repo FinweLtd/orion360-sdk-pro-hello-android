@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fi.finwe.orion360.sdk.pro.hello.MainActivity">
 
-    <fi.finwe.orion360.v3.OrionView
+    <fi.finwe.orion360.sdk.pro.view.OrionView
         android:id="@+id/orion_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
