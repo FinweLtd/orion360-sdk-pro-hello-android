@@ -123,7 +123,7 @@ After editing a gradle file, the IDE suggests to sync the project. Accept the su
 
 Notice that here we will use version '3.0.10.001' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
 
-![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438599/f00eaa78-adc0-11e6-8c2f-dc222f76c5dd.png)
+![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438683/2c32926c-adc1-11e6-81b9-11f6ca9783c7.png)
 
 Now we can use Orion360 SDK in the project.
 
