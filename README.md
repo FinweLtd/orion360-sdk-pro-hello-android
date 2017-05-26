@@ -29,6 +29,8 @@ https://developer.android.com/studio/install.html
 
 Then, using the SDK Manager tool, install one or more Android SDKs. Notice that for Orion360 SDK Pro, minimum API level is 19: Android 4.4 KitKat.
 
+> Update: Starting from Orion360 SDK (Pro) for Android v. 3.1, the minimum API level is 18: Jelly Bean.
+
 For accessing GitHub repositories, check that you have Git (open console and type 'git') or install it and restart Android Studio:
 https://git-scm.com
 
@@ -70,6 +72,8 @@ Fill in your application name, company domain, package name, and project locatio
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057520/afd7c270-a4f4-11e6-92e8-0d4a9edfcf61.png)
 
 Check that "Phone and Tablet" is selected, and the minimum SDK is at least "API 19: Android 4.4 (KitKat)". Click Next.
+
+> Update: Starting from Orion360 SDK (Pro) for Android v. 3.1, the minimum API level is 18: Jelly Bean.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057538/c7fb0132-a4f4-11e6-9a6b-0c09d3b70363.png)
 
