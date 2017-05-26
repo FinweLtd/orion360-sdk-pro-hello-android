@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "fi.finwe.orion360.sdk.pro.hello"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -21,7 +21,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'fi.finwe.orion360:orion360-sdk-pro:3.0.10.001' // From Finwe maven repo at Bintray
+    compile 'fi.finwe.orion360:orion360-sdk-pro:3.1.00.014' // From Finwe maven repo at Bintray
+    compile 'fi.finwe.util:finwe-util:1.0.04' // From Finwe maven repo at Bintray
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

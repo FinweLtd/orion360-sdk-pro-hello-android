@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="finwe-util-native-1.0.07.000">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/e2c2aa5e67f04aa81c2f9085a9e6a3e0459cb671/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/e2c2aa5e67f04aa81c2f9085a9e6a3e0459cb671/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

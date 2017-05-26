@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="orion360-sdk-pro-3.1.00.014">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/ddabc65519cb90ad22c2ea166458741532e1f172/output/jars/libs/finwe-exoplayer-1.4.2.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/ddabc65519cb90ad22c2ea166458741532e1f172/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ddabc65519cb90ad22c2ea166458741532e1f172/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
