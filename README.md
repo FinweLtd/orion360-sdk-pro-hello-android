@@ -29,6 +29,8 @@ https://developer.android.com/studio/install.html
 
 Then, using the SDK Manager tool, install one or more Android SDKs. Notice that for Orion360 SDK Pro, minimum API level is 19: Android 4.4 KitKat.
 
+> Update: Starting from Orion360 SDK (Pro) for Android v. 3.1, the minimum API level is 18: Jelly Bean.
+
 For accessing GitHub repositories, check that you have Git (open console and type 'git') or install it and restart Android Studio:
 https://git-scm.com
 
@@ -70,6 +72,8 @@ Fill in your application name, company domain, package name, and project locatio
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057520/afd7c270-a4f4-11e6-92e8-0d4a9edfcf61.png)
 
 Check that "Phone and Tablet" is selected, and the minimum SDK is at least "API 19: Android 4.4 (KitKat)". Click Next.
+
+> Update: Starting from Orion360 SDK (Pro) for Android v. 3.1, the minimum API level is 18: Jelly Bean.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20057538/c7fb0132-a4f4-11e6-9a6b-0c09d3b70363.png)
 
@@ -118,15 +122,16 @@ After editing a gradle file, the IDE suggests to sync the project. Accept the su
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20058788/6cf0953e-a4fb-11e6-9c9a-4596872db28c.png)
 
-After gradle sync has finished, in Android Studio's Project view, double click build.gradle file for the app module. Find section 'dependencies', and add the following line inside it:
+After gradle sync has finished, in Android Studio's Project view, double click build.gradle file for the app module. Find section 'dependencies', and add the following lines inside it:
 
 ```gradle
-compile 'fi.finwe.orion360:orion360-sdk-pro:3.0.10.001' // From Finwe maven repo at Bintray
+compile 'fi.finwe.orion360:orion360-sdk-pro:3.1.00.014' // From Finwe maven repo at Bintray
+compile 'fi.finwe.util:finwe-util:1.0.04' // From Finwe maven repo at Bintray
 ```
 
 After editing a gradle file, the IDE suggests to sync the project. Accept the suggestion, or click the Sync button from the toolbar.
 
-Notice that here we will use version '3.0.10.001' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
+Notice that here we will use version '3.1.00.014' of the SDK binaries. When new versions are released, you can simply type here the version number that you wish to use in your project. Upgrading to the latest Orion360 version requires nothing more than changing the version number, performing gradle sync, and rebuilding the app (unless there are API changes).
 
 ![alt tag](https://cloud.githubusercontent.com/assets/12032146/20438683/2c32926c-adc1-11e6-81b9-11f6ca9783c7.png)
 
