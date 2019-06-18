@@ -8,6 +8,22 @@ This repository contains a minimal Hello World -style example of adding 360 vide
 
 > This application is available in [Google Play](https://play.google.com/store/apps/details?id=fi.finwe.orion360.sdk.pro.hello)
 
+> IMPORTANT NOTE
+>
+> Starting August 1, 2019, your apps published on Google Play will need to support 64-bit architectures. 
+> 
+> You can create a single .apk that contains the usual 32-bit and 64-bit binaries (armeabi-v7a and arm64-v8a) by using Orion360 v. 3.1.02.002 or later in your gradle file: 
+>
+>```
+>implementation 'fi.finwe.orion360:orion360-sdk-pro:3.1.02.002'
+>```
+>
+> You can also create separate .apks for 32-bit and 64-bit builds or let Google Play handle delivery of the correct files by using Android App Bundle.
+>
+> If you still need to support *x86* target please use Orion360 v. 3.1.02.001 to create a separate .apk file for these targets. If you are not sure, then almost certainly you do not need it.
+>
+> The difference between Orion360 v. 3.1.02.002 and v. 3.1.02.001 is different build targets. There are some minor bugfixes that were backported from newer internal builds, but no API or feature changes.
+
 Table of Contents
 -----------------
 1. [Prerequisities](#prerequisities)
